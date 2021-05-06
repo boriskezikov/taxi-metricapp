@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+hdfs:
+  host: "hdfs://localhost:9000"
+spring:
+  application:
+    name: taxi-metricapp
+
+spark:
+  master: local[*]
+  driver:
+    maxResultSize: 0
+  executor:
+    maxResultSize: 0
+  sql:
+    execution:
+      arrow:
+        pyspark:
+          enabled: true
+          fallback:
+            enabled: true
